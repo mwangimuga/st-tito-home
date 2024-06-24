@@ -11,9 +11,14 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    overflow:scroll;
+    overflow: scroll;
+    
 }
-
+section{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
 
 .wrapper{
     display: flex;
@@ -308,3 +313,263 @@ h1 {
 
 }
 
+.map-container {
+    position: relative;
+    padding-bottom: 56.25%; 
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    height: auto;
+}
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.contact-us{
+    position:relative;
+    min-height: 100vh;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.content{
+    max-width: 800px;
+    text-align: center;
+}
+
+.content p{
+    color: #fff;
+    font-weight: 300;
+}
+
+.contact-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.contact-info{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.box{
+    position: relative;
+    padding:20px 0;
+    display: flex;
+}
+
+
+.contact-icon{
+    min-width: 60px;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 25px;
+}
+
+.contact-text{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #fff;
+    flex-direction: column;
+    font-weight: 300;
+
+}
+.contact-text a {
+    color: inherit;
+    text-decoration: none; 
+}
+.contact-text h5{
+        font-weight: 500;
+        color: #770968;
+    }
+
+.contact-text a:hover {
+    text-decoration: underline; 
+}
+
+.contact-form{
+    width: 40%;
+    padding: 40px;
+    background: #fff;
+
+}
+
+.contact-form h4{
+    font-size: 35px;
+    color: #333;
+    font-weight: 600;
+}
+
+.inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.inputBox input,
+.inputBox textarea{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+
+.inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: .5%;
+    color: #666;
+}
+.inputBox input:focus ~ span,
+.inputBox input:valid ~ span,
+.inputBox textarea:focus ~ span,
+.inputBox textarea:valid ~ span{
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+
+}
+.inputBox input[type="submit"]{
+    width: 100px;
+    background: #00bcd4;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
+
+@media (max-width: 991px) {
+    .contact-us{
+        padding: 50px;
+    }
+    .contact-container{
+        flex-direction: column;
+    }
+    .contact-info,
+    .contact-form{
+        margin-bottom: 40px;
+        width: 100%;
+    }
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.welcome {
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+    padding: 100px;
+    background: transparent;   
+}
+
+.title-welcome {
+    text-align: center;
+    font-size: 3em;
+    font-weight: bolder;
+    border-bottom: 3px solid #222;
+    margin-bottom: 2rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.motto {
+    font-size: 2em;
+    margin-top: 10px;
+    color: #770968;
+}
+
+.about-container {
+    background-color: #191919;
+    padding: 20px;
+    margin-top: 80px;
+    
+}
+
+.about-main {
+    width: 100%;
+    max-width: 1130px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.about-text {
+    width: 550px;
+    color: #770968;
+    flex: 1;
+}
+
+.about-img {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+}
+
+.about-text h2 {
+    color: white;
+    font-size: 60px;
+    text-transform: capitalize;
+    margin-top: 20px;
+}
+
+p {
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 18px;
+    margin-bottom: 45px;
+}
+
+.contact-button {
+    background: #cfcfcf;
+    color: #000;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 13px 30px;
+    border-radius: 30px;
+    transition: 0.5s;
+    font-size: 25px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.contact-button:hover {
+    cursor: pointer;
+    background: transparent;
+    border: 2px solid #000;
+    color: #000;
+}
