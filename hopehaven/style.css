@@ -14,14 +14,10 @@ body{
     overflow: scroll;
     
 }
-section{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
 
 .wrapper{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 110vh;
@@ -455,15 +451,20 @@ h1 {
     transform: translateY(-20px);
 
 }
-.inputBox input[type="submit"]{
-    width: 100px;
-    background: #00bcd4;
+.submit-button {
+    background-color: #007bff;
     color: #fff;
     border: none;
+    padding: 10px 20px;
     cursor: pointer;
-    padding: 10px;
-    font-size: 18px;
+    border-radius: 5px;
+    font-size: 16px;
 }
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
 
 @media (max-width: 991px) {
     .contact-us{
@@ -478,18 +479,14 @@ h1 {
         width: 100%;
     }
 }
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
 
 .welcome {
     width: 100%;
     position: relative;
     margin: 0 auto;
     text-align: center;
+    top: 50%;
     padding: 100px;
     background: transparent;   
 }
@@ -511,10 +508,10 @@ body {
 }
 
 .about-container {
-    background-color: #191919;
-    padding: 20px;
-    margin-top: 80px;
+
+    padding: 10px;
     
+    justify-content: space-around;
 }
 
 .about-main {
@@ -523,7 +520,7 @@ body {
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    
     gap: 20px;
 }
 
@@ -533,12 +530,6 @@ body {
     flex: 1;
 }
 
-.about-img {
-    width: 100%;
-    max-width: 420px;
-    height: auto;
-}
-
 .about-text h2 {
     color: white;
     font-size: 60px;
@@ -546,7 +537,8 @@ body {
     margin-top: 20px;
 }
 
-p {
+.about-text p {
+    background-color: #e4e1c0;
     letter-spacing: 1px;
     line-height: 28px;
     font-size: 18px;
@@ -568,6 +560,27 @@ p {
 }
 
 .contact-button:hover {
+    cursor: pointer;
+    background: transparent;
+    border: 2px solid #000;
+    color: #000;
+}
+.adminlogin {
+    background: #cfcfcf;
+    color: #000;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 13px 30px;
+    border-radius: 30px;
+    transition: 0.5s;
+    font-size: 10px;
+    margin-top: 20px;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.adminlogin:hover{
     cursor: pointer;
     background: transparent;
     border: 2px solid #000;

@@ -77,33 +77,26 @@
                 </div>
                 
             </div>
-
             <div class="contact-form">
-                <form>
+                <form action="https://api.web3forms.com/submit" method="post">
                     <h4>Send Message</h4>
+                    <input type="hidden" name="access_key" value="fd299a91-a10a-4400-acd1-dba391352028">
+                    
                     <div class="inputBox">
-                        <input type="text" name="" required="required">
+                        <input type="text" name="firstname" required="required">
                         <span>Full Name</span>
                     </div>
-
                     <div class="inputBox">
-                        <input type="text" name="" required="required">
+                        <input type="email" name="email" required="required">
                         <span>Email</span>
                     </div>
-
                     <div class="inputBox">
-                        <textarea required="required"></textarea>
+                        <textarea name="message" required></textarea>
                         <span>Your Message...</span>
                     </div>
+                    <button type="submit" class="submit-button">Submit Form</button>
 
-                    <div class="inputBox">
-                        <input type="submit" name="" value="Send">
-                    </div>
                 </form>
-
-            </div>
-            <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2518.5680956702466!2d36.71522541585627!3d-1.1997030359299317!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f22475502a7f5%3A0xf05c9d52c345cacb!2sSt%20Tito%20High%20School!5e0!3m2!1sen!2ske!4v1687210204990!5m2!1sen!2ske" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
         
