@@ -55,7 +55,7 @@ $db_name = "upload.db";
                 <li><a href="index.html" class="link">Home</a></li>
                 <li><a href="gallery.html" class="link">Gallery</a></li>
                 <li><a href="about.html" class="link">Contact-Us</a></li>
-                <li><a href="resources.html" class="link active">Resources</a></li>
+                <li><a href="resources.php" class="link active">Resources</a></li>
             </ul>
         </div>
         <div class="nav-menu-btn">
@@ -124,7 +124,7 @@ $db_name = "upload.db";
                 <li><a href="index.html" class="link">Home</a></li>
                 <li><a href="gallery.html" class="link">Gallery</a></li>
                 <li><a href="about.html" class="link">Contact-Us</a></li>
-                <li><a href="resources.html" class="link active">Resources</a></li>
+                <li><a href="resources.php" class="link active">Resources</a></li>
             </ul>
         </div>
         
