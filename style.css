@@ -119,6 +119,9 @@ body{
     .photo-gallery{
         flex-direction: column;
     }
+    .table {
+        font-size: 1rem; 
+      }
 }
 
 @media only screen and (max-width: 540px) {
@@ -465,6 +468,19 @@ h1 {
     background-color: #0056b3;
 }
 
+.reset-button{
+    background-color: #e09838;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.reset-button:hover {
+    background-color: #fffb0086;
+}
 
 @media (max-width: 991px) {
     .contact-us{
@@ -493,7 +509,7 @@ h1 {
 
 .title-welcome {
     text-align: center;
-    font-size: 3em;
+    font-size: 4em;
     font-weight: bolder;
     border-bottom: 3px solid #222;
     margin-bottom: 2rem;
@@ -525,24 +541,21 @@ h1 {
 }
 
 .about-text {
-    width: 550px;
+    width: 70%;
     color: #770968;
     flex: 1;
 }
 
 .about-text h2 {
     color: white;
-    font-size: 60px;
+    font-size: 40px;
     text-transform: capitalize;
     margin-top: 20px;
 }
 
 .about-text p {
-    background-color: #e4e1c0;
-    letter-spacing: 1px;
-    line-height: 28px;
     font-size: 18px;
-    margin-bottom: 45px;
+    
 }
 
 .contact-button {
@@ -586,3 +599,72 @@ h1 {
     border: 2px solid #000;
     color: #000;
 }
+.form{
+    width: 100%;
+    padding: 40px;
+    font-size: 3em;
+    
+}
+
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+    border-collapse: collapse;
+    font-size: 1.2rem; 
+  }
+  
+  
+  .table-bordered {
+    border: .5px solid #dee2e6;
+  }
+  
+  .table-bordered th,
+  .table-bordered td {
+    border: .5px solid #dee2e6;
+    padding: 0.75rem; 
+  }
+  
+  
+  .table-striped tbody tr:nth-of-type(odd) {
+    background-color: #77096834;
+  }
+
+  .table-striped tbody tr:last-of-type {
+    background-color: #770968;
+  }
+
+  .table-striped tbody tr.active-row {
+    font-weight: bold;
+    color: #770968;
+  }
+  
+  .table-hover tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  
+  .table-hover tbody tr:hover td,
+  .table-hover tbody tr:hover th {
+    border: 2px solid #3c5f1f;
+  }
+  
+  
+  .table thead th {
+    font-weight: bold;
+    background-color: #770968;
+  }
+  
+  
+  .table {
+    border-radius: 0.25rem;
+    overflow: hidden;
+  }
+  
+  
+  .table th,
+  .table td {
+    text-align: center;
+    vertical-align: middle;
+  }

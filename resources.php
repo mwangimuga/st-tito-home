@@ -1,23 +1,23 @@
 <?php
-//database connection details
 
-$db_host = "localhost";
-$db_user = "root";
-$db_pass = "";
-$db_name = "upload.db";
-
- $conn = new mysqli($db_host, $db_user, $db_pass, $db_name);
+$servername = "localhost";
+$username = "root";
+$password = ""; 
+$dbname = "upload.db";
 
 
- if ($conn->connect_error) {
-                    die("Connection failed: " . $conn->connect_error);
-                }
+$conn = new mysqli($servername, $username, $password, $dbname);
 
- //Fetch the uploaded files from the database
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
 
  $sql = "SELECT *FROM files";
  $result = $conn->query($sql);
 
+
+ $conn->close();
 ?>
 
 
@@ -64,17 +64,13 @@ $db_name = "upload.db";
         </div>
     </nav>
     
-    <form method="post">
-        <label>Search</label>
-        <input type="text" name="search">
-        <input type="submit" name="submit">
-            
-    </form>
+    
 
 
-    <div class="container mt-5">
-        <h2>Uploaded Files</h2>
-        <table class="table table-bordered table-striped">
+    <div class="resources-table">
+        <h2 class="title"><i class='bx bxs-download'></i>Download <span>Documents </span>Here</h2>
+        <div class="table-responsive">
+        <table class="table table-bordered table-striped table-hover">
             <thead>
                 <tr>
                     <th>File Name</th>
@@ -84,28 +80,21 @@ $db_name = "upload.db";
             </thead>
             <tbody>
                 <?php
-                // Display the uploaded files and download links
+                
                 if ($result->num_rows > 0) {
                     while ($row = $result->fetch_assoc()) {
-                        $file_path = "uploads/" . $row['filename'];
-                        ?>
-                        <tr>
-                            <td><?php echo $row['filename']; ?></td>
-                            
-                            <td><a href="<?php echo $file_path; ?>" class="btn btn-primary" download>Download</a></td>
-                        </tr>
-                        <?php
+                        echo "<tr>";
+                        echo "<td>".$row['filename']."</td>";
+                        echo '<td><a href="uploads/'.$row['filename'].'" class="btn btn-info" download>Download</a></td>';
+                        echo "</tr>";
                     }
-                } else {
+                    }else{
+                        echo "<tr><td colspan='3'>No Records found.</td></tr>";
+                    }
                     ?>
-                    <tr>
-                        <td colspan="4">No files uploaded yet.</td>
-                    </tr>
-                    <?php
-                }
-                ?>
             </tbody>
         </table>
+        </div>
     </div>
         
   </div>
@@ -154,43 +143,3 @@ $db_name = "upload.db";
 </body>
 
 </html>
-<?php
-
-if (isset($_POST["submit"])) {
-	$str = $_POST["search"];
-	$sth = $con->prepare("SELECT * FROM `search` WHERE Name = '$str'");
-
-	$sth->setFetchMode(PDO:: FETCH_OBJ);
-	$sth -> execute();
-
-	if($row = $sth->fetch())
-	{
-		?>
-        <br><br><br>
-		<table>
-			<tr>
-				<th>File Name</th>
-				<th>Download</th>
-			</tr>
-			<tr>
-				<td><?php echo $row->filename; ?></td>
-				<td><a href="<?php echo $file_path; ?>" class="btn btn-primary" download>Download</a></td>
-			</tr>
-
-		</table>
-<?php 
-	}
-		
-		
-		else{
-			echo "Name Does not exist";
-		}
-
-
-}
-
-?>
-
-<?php
-$conn->close();
-?>
